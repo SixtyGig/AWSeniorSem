@@ -82,6 +82,8 @@
     <Compile Include="Assets\PlayerData.cs" />
     <Compile Include="Assets\PoolManager.cs" />
     <Compile Include="Assets\Scripts\GameManager\PlayerDataSet.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\homing.cs" />
+    <Compile Include="Assets\SendObjectHome.cs" />
     <None Include="Assets\3rd Party\SimpleSky\ReadMe.txt" />
     <None Include="Assets\3rd Party\VRUI - Material Design\Assets\Fonts\Roboto\LICENSE.txt" />
     <None Include="Assets\3rd Party\VRUI - Material Design\Documentation\README.txt" />
