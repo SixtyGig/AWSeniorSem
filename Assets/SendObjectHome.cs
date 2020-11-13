@@ -9,7 +9,7 @@ public class SendObjectHome : MonoBehaviour
     {
         if (other.tag == "ImportantObject") 
         {
-            other.GetComponent<homing>.SendHome();
+            //other.GetComponent<homing>.SendHome();
         }
     }
 }

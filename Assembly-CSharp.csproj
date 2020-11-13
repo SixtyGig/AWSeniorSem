@@ -78,12 +78,13 @@
     <Compile Include="Assets\3rd Party\VRUI - Material Design\Assets\Scripts\VRUITooltip.cs" />
     <Compile Include="Assets\3rd Party\VRUI - Material Design\Demo\SampleSceneAssets\SampleSceneManager.cs" />
     <Compile Include="Assets\DoNotDestroy.cs" />
-    <Compile Include="Assets\pencilTip.cs" />
     <Compile Include="Assets\PlayerData.cs" />
+    <Compile Include="Assets\PlayerDataSet.cs" />
     <Compile Include="Assets\PoolManager.cs" />
-    <Compile Include="Assets\Scripts\GameManager\PlayerDataSet.cs" />
     <Compile Include="Assets\Scripts\MainMenu\homing.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\pencilTip.cs" />
     <Compile Include="Assets\SendObjectHome.cs" />
+    <Compile Include="Assets\TrafficManager.cs" />
     <None Include="Assets\3rd Party\SimpleSky\ReadMe.txt" />
     <None Include="Assets\3rd Party\VRUI - Material Design\Assets\Fonts\Roboto\LICENSE.txt" />
     <None Include="Assets\3rd Party\VRUI - Material Design\Documentation\README.txt" />
