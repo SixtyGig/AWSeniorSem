@@ -699,6 +699,10 @@
       <Project>{383DF335-979D-ACBD-93D7-E67A25EDB1CE}</Project>
       <Name>SteamVR_Input_Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{5E29CAEA-1C0E-0FCD-6E82-0EB5FF538202}</Project>
+      <Name>SteamVR_Actions</Name>
+    </ProjectReference>
     <ProjectReference Include="SteamVR_Editor.csproj">
       <Project>{5186C50C-DE55-C744-1007-ABED603A8319}</Project>
       <Name>SteamVR_Editor</Name>
