@@ -5,6 +5,7 @@ using UnityEngine;
 public class PhysicalMouse : MonoBehaviour
 {
     public GameObject physicalMouse;
+    public GameObject computerCursor;
 
     private float xPos = 0;
     private float yPos = 0;
@@ -12,36 +13,41 @@ public class PhysicalMouse : MonoBehaviour
 
     Vector3 newPos;
 
-    public int xPosBoundingCoordinate;
-    public int xNegBoundingCoordinate;
-    public int zPosBoundingCoordinate;
-    public int zNegBoundingCoordinate;
+    public float xMaxBoundingCoordinate;
+    public float xMinBoundingCoordinate;
+    public float zMaxBoundingCoordinate;
+    public float zMinBoundingCoordinate;
 
     // Update is called once per frame
     void Update()
+    {
+        KeepMouseBound();
+
+    }
+    public void KeepMouseBound() 
     {
         xPos = physicalMouse.transform.position.x;
         yPos = physicalMouse.transform.position.y;
         zPos = physicalMouse.transform.position.z;
 
-        if (physicalMouse.transform.position.x > xPosBoundingCoordinate)
+        if (physicalMouse.transform.position.x > xMaxBoundingCoordinate)
         {
-            newPos = new Vector3(xPosBoundingCoordinate, yPos, zPos);
+            newPos = new Vector3(xMaxBoundingCoordinate, yPos, zPos);
             physicalMouse.transform.position = newPos;
         }
-        if (physicalMouse.transform.position.x < xNegBoundingCoordinate)
+        if (physicalMouse.transform.position.x < xMinBoundingCoordinate)
         {
-            newPos = new Vector3(xNegBoundingCoordinate, yPos, zPos);
+            newPos = new Vector3(xMinBoundingCoordinate, yPos, zPos);
             physicalMouse.transform.position = newPos;
         }
-        if (physicalMouse.transform.position.z > zPosBoundingCoordinate) 
+        if (physicalMouse.transform.position.z > zMaxBoundingCoordinate)
         {
-            newPos = new Vector3(xPos, yPos, zPosBoundingCoordinate);
+            newPos = new Vector3(xPos, yPos, zMaxBoundingCoordinate);
             physicalMouse.transform.position = newPos;
         }
-        if (physicalMouse.transform.position.z < zNegBoundingCoordinate)
+        if (physicalMouse.transform.position.z < zMinBoundingCoordinate)
         {
-            newPos = new Vector3(xPos, yPos, zNegBoundingCoordinate);
+            newPos = new Vector3(xPos, yPos, zMinBoundingCoordinate);
             physicalMouse.transform.position = newPos;
         }
     }
