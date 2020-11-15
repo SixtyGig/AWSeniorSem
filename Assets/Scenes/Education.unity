@@ -1075,7 +1075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282551680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.372, y: 1.158, z: -19.52}
+  m_LocalPosition: {x: 0.456, y: 1.158, z: -19.52}
   m_LocalScale: {x: 0.19, y: 0.18, z: 0.28}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1094,6 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicalMouse: {fileID: 282551680}
+  computerCursor: {fileID: 0}
   xMaxBoundingCoordinate: 0
   xMinBoundingCoordinate: 0
   zMaxBoundingCoordinate: 0
@@ -4542,7 +4543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175962182}
   m_LocalRotation: {x: -0.511767, y: 0.5129976, z: -0.4873897, w: 0.4872158}
-  m_LocalPosition: {x: 0.56, y: 1.46, z: 101.08365}
+  m_LocalPosition: {x: 1.09, y: 1.04, z: 101.08365}
   m_LocalScale: {x: 0.069999985, y: 0.07, z: 0.070000015}
   m_Children: []
   m_Father: {fileID: 2141553770}
@@ -4590,10 +4591,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   computerCursor: {fileID: 1175962182}
-  xPosBoundingCoordinate: 0
-  xNegBoundingCoordinate: 0
-  yPosBoundingCoordinate: 0
-  yNegBoundingCoordinate: 0
+  xMaxBoundingCoordinate: 0
+  xMinBoundingCoordinate: 0
+  yMaxBoundingCoordinate: 0
+  yMinBoundingCoordinate: 0
 --- !u!1 &1182026621
 GameObject:
   m_ObjectHideFlags: 0
