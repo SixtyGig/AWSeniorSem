@@ -20,11 +20,11 @@ public class CursorCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        KeepCursorBound();
+        //KeepCursorBound();
 
     }
 
-    public void KeepCursorBound() 
+    /*public void KeepCursorBound() 
     {
         xPos = computerCursor.transform.position.x;
         yPos = computerCursor.transform.position.y;
@@ -50,5 +50,5 @@ public class CursorCheck : MonoBehaviour
             newPos = new Vector3(xPos, yMinBoundingCoordinate, zPos);
             computerCursor.transform.position = newPos;
         }
-    }
+    }*/
 }
