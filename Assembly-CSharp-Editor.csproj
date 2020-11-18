@@ -63,12 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\3rd Party\Modern UI Pack\Editor\ContextMenu.cs" />
+    <Compile Include="Assets\3rd Party\Modern UI Pack\Editor\ExtendedColorPicker.cs" />
+    <Compile Include="Assets\3rd Party\Modern UI Pack\Editor\InitMUIP.cs" />
+    <Compile Include="Assets\3rd Party\Modern UI Pack\Editor\UIManagerEditor.cs" />
     <Compile Include="Assets\3rd Party\VRUI - Material Design\Editor\VRUIColorPaletteEditor.cs" />
     <Compile Include="Assets\3rd Party\VRUI - Material Design\Editor\VRUITagManager.cs" />
-    <Compile Include="Assets\Modern UI Pack\Editor\ContextMenu.cs" />
-    <Compile Include="Assets\Modern UI Pack\Editor\ExtendedColorPicker.cs" />
-    <Compile Include="Assets\Modern UI Pack\Editor\InitMUIP.cs" />
-    <Compile Include="Assets\Modern UI Pack\Editor\UIManagerEditor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Austin Winkler/Documents/Github/EpiAED_SeniorSem/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

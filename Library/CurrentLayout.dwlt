@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 2510
+  controlID: 108
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 2511
+  controlID: 109
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 2512
+  controlID: 110
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,20 +337,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3rd Party/SteamVR_Input/ActionSetClasses
+    - Assets/Scenes/MainMenu
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/3rd Party/SteamVR_Input/ActionSetClasses
+  - Assets/Scenes/MainMenu
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Austin Winkler\Documents\Github\EpiAED_SeniorSem
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f0910000
-    m_LastClickedID: 37360
-    m_ExpandedIDs: 00000000007d0000247e00005480000060820000188800007c890000028b0000368d0000808d0000de8f00007c910000f49300008894000000ca9a3b
+    m_SelectedIDs: 784d0000
+    m_LastClickedID: 19832
+    m_ExpandedIDs: 000000001a300000aa310000b63400009e370000523b0000524100005a430000d04500002c4a00007a4c0000784d0000726c00003274000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000007d0000247e00005480000060820000188800007c890000028b0000de8f00007c910000f49300008894000000ca9a3b
+    m_ExpandedIDs: 000000001a300000aa310000b63400009e370000763f0000524100005a43000060460000c44600002c4a00007a4c0000b64f00006a500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -422,7 +422,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -497,9 +497,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 46970000
-      m_LastClickedID: 38726
-      m_ExpandedIDs: 9c85ffff76b7ffff28d4ffffd49800004899000074990000169a00004c9b0000669b0000789b0000
+      m_SelectedIDs: 143f0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: f2e6ffffb0ebffff86f3ffff96f9ffffa4f9ffffbafbffffac5c00000e5e0000205f0000f86000001261000024610000e0660000d6670000de690000ec6900000e6b0000a86c00000a6e00001c6f0000f47000000e71000068b30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -555,9 +555,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.7602531, y: 2.8315349, z: -22.821264}
+    m_Target: {x: 0.6868259, y: -0.051006317, z: 9.462292}
     speed: 2
-    m_Value: {x: 1.7602531, y: 2.8315349, z: -22.821264}
+    m_Value: {x: 0.6868259, y: -0.051006317, z: 9.462292}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -585,13 +585,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.015909296, y: -0.9833412, z: 0.14591444, w: 0.10721973}
+    m_Target: {x: 0.0036378347, y: -0.9805245, z: 0.19551364, w: 0.018246904}
     speed: 2
-    m_Value: {x: 0.015909296, y: -0.9833412, z: 0.14591444, w: 0.10721973}
+    m_Value: {x: 0.0036378347, y: -0.9805245, z: 0.19551364, w: 0.018246904}
   m_Size:
-    m_Target: 10
+    m_Target: 10.829229
     speed: 2
-    m_Value: 10
+    m_Value: 10.829229
   m_Ortho:
     m_Target: 0
     speed: 2
