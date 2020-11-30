@@ -6,6 +6,14 @@ TagManager:
   tags:
   - PencilLead
   - ImportantObject
+  - VRUIBackground
+  - VRUIText
+  - VRUIRadio
+  - SaveManager
+  - TestPassNum
+  - TestFailNum
+  - StatsManager
+  - QuizManager
   layers:
   - Default
   - TransparentFX

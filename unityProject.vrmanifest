@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.seniorseminar_epiaed.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Austin Winkler\\Documents\\Github\\EpiAED_SeniorSem\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "SeniorSeminar_EpiAED [Testing]"
+        }
+      }
+    }
+  ]
+}

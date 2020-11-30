@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class SendObjectHome : MonoBehaviour
 {
-    // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "ImportantObject") 
+        if (other.CompareTag("ImportantObject")) // Checking if the object is tagged as an Important Object
         {
-            //other.GetComponent<homing>.SendHome();
+            // If true and the object has the "Homing.cs" script attached, reset the object to it's original "home" location
+            if(other.GetComponent<Homing>() != null) 
+            {
+                other.GetComponent<Homing>().GoHome();
+            }
         }
     }
 }
