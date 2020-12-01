@@ -10621,8 +10621,6 @@ MonoBehaviour:
   totalEPIFailedSimulations: 0
   isEducated_EPI: 0
   isTrained_EPI: 0
-  totalQuestions: 0
-  numQuestionsCorrect: 0
   currentModule: 
   saveData:
     totalEPIQuizPasses: 0
@@ -10631,8 +10629,6 @@ MonoBehaviour:
     totalFailedSimulations: 0
     isEducated_EPI: 0
     isTrained_EPI: 0
-    totalQuestions: 0
-    numQuestionsCorrect: 0
     currentModule: 
 --- !u!114 &1323506826
 MonoBehaviour:
@@ -11519,7 +11515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: 1
   rightHand: 2
-  currentActivity: 3
+  upcomingModule: 0
 --- !u!114 &1421166902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16668,7 +16664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: 1
   rightHand: 2
-  currentActivity: 2
+  upcomingModule: 0
 --- !u!114 &3994355823895805536
 MonoBehaviour:
   m_ObjectHideFlags: 0
