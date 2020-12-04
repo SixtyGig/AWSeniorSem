@@ -20,7 +20,7 @@ public class PlayerData : MonoBehaviour
     public bool isTrained_EPI;
 
     // Education Data - Quiz
-
+    public float passingScore;
 
     // Current Active Module
     public string currentModule;
@@ -48,17 +48,23 @@ public class PlayerData : MonoBehaviour
         saveData.isTrained_EPI = this.isTrained_EPI;
 
         // Education Data - Quiz
-
+        saveData.passingScore = this.passingScore;
 
         // Current Active Module
         saveData.currentModule = this.currentModule;
 
 
-        string destination = Application.persistentDataPath + "/save.dat";
+        string destination = Application.persistentDataPath + "/savefile.dat";
         FileStream file;
 
-        if (File.Exists(destination)) file = File.OpenWrite(destination);
-        else file = File.Create(destination);
+        if (File.Exists(destination))
+        {
+            file = File.OpenWrite(destination);
+        }
+        else
+        {
+            file = File.Create(destination);
+        }
 
         BinaryFormatter bf = new BinaryFormatter();
         bf.Serialize(file, saveData);
@@ -83,29 +89,41 @@ public class PlayerData : MonoBehaviour
         saveData = (PlayerDataSet)bf.Deserialize(file);
         file.Close();
 
+        // Game Data
         this.totalEPIQuizPasses = saveData.totalEPIQuizPasses;
         this.totalEPIQuizFailures = saveData.totalEPIQuizFailures;
 
         this.totalEPIPassedSimulations = saveData.totalPassedSimulations;
         this.totalEPIFailedSimulations = saveData.totalFailedSimulations;
 
+        // Education Data
         this.isEducated_EPI = saveData.isEducated_EPI;
         this.isTrained_EPI = saveData.isTrained_EPI;
 
+        // Education Data - Quiz
+        this.passingScore = saveData.passingScore;
+
+        // Current Active Module
         this.currentModule = saveData.currentModule;
     }
 
     public void GenerateDefaults()
     {
+        // Game Data
         this.totalEPIQuizPasses = 0;
         this.totalEPIQuizFailures = 0;
 
         this.totalEPIPassedSimulations = 0;
         this.totalEPIFailedSimulations = 0;
 
+        // Education Data
         this.isEducated_EPI = false;
         this.isTrained_EPI = false;
 
+        // Education Data - Quiz
+        this.passingScore = 0.70f;
+
+        // Current Active Module
         this.currentModule = "null";
     }
 }

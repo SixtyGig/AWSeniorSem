@@ -10,14 +10,13 @@ public class QuizManagement : MonoBehaviour
     public PlayerData PD;
 
     public List<Question> questions; // List of Questions (and their answers)
-    public GameObject[] options; // buttons
+    public GameObject[] options; // Array of buttos on the UI
     public int currentQuestion; // holds current question index
 
     private int numTotalQuestions;
     private int numQuestionsCorrect;
     private int numQuestionsIncorrect;
     private float correctPercentage;
-    public float passingScore;
 
     public Text questionText; // Location where the Question's text component is located
     public Canvas canvas;
@@ -36,7 +35,6 @@ public class QuizManagement : MonoBehaviour
 
         correctPercentage = 0.0f;
 
-        //AssignQuestions(); // *** First we need to know which bank of questions we need to ask - For post-senior sem use. Disregard. ***
         GenerateQuestion();  // Then we select the first question from that bank to display to the user
     }
 
@@ -47,7 +45,7 @@ public class QuizManagement : MonoBehaviour
         Debug.Log(questions[currentQuestion].question);
         GenerateAnswers(); // Every time we generate a question, answers will also be allotted to it
          
-        questions.RemoveAt(currentQuestion);// Then after this question has been assigned to the UI, we want to remove this question from the pool of total questions | AKA: If we have 10 questions and #1 is displayed on the UI, we now only have 9 questions remaining in the pool to choose from
+        questions.RemoveAt(currentQuestion); // Then after this question has been assigned to the UI, we want to remove this question from the pool of total questions | AKA: If we have 10 questions and #1 is displayed on the UI, we now only have 9 questions remaining in the pool to choose from
     }
 
     private void GenerateAnswers() // This generates the answers for the question selected above
@@ -96,7 +94,7 @@ public class QuizManagement : MonoBehaviour
     {
         correctPercentage = numQuestionsCorrect / numTotalQuestions; // Calculating what the final score was
 
-        if ((correctPercentage >= passingScore) && (numQuestionsCorrect + numQuestionsIncorrect) == numTotalQuestions) // If they pass
+        if ((correctPercentage >= PD.passingScore) && (numQuestionsCorrect + numQuestionsIncorrect) == numTotalQuestions) // If they pass
         {
             if (PD.isEducated_EPI == false)
             {
@@ -111,27 +109,5 @@ public class QuizManagement : MonoBehaviour
             PD.totalEPIQuizFailures++;
             PD.Save();
         }
-    }
-
-
-    public void AssignQuestions() // For Senior Sem Project, disregard this method. This is something I plan to use later.
-    {
-        if (PD.currentModule == "Education_EpiPen")
-        {
-            // assign the specific questions to "List<Questions> questions"
-
-            // In the future, I plan to add JSON compatibility, so I can read the questions from a file
-        }
-        else if (PD.currentModule == "Template")
-        {
-
-            // assign the specific questions to "List<Questions> questions"
-            numTotalQuestions = questions.Count;
-        }
-        else
-        {
-            Debug.Log("A Module has not been assigned or is unrecognizable");
-        }
-
     }
 }

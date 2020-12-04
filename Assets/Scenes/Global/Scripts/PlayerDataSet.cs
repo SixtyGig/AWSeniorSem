@@ -18,7 +18,7 @@ public class PlayerDataSet
     public bool isTrained_EPI;
 
     // Education Data - Quiz
-
+    public float passingScore;
 
     // Current Active Module/Activity
     public string currentModule;

@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Valve.VR;
 
+/*
+ * DUE TO ISSUES WITH CUSTOM ENUMS IN UNITY EDITOR, THIS DOES NOT SEEM TO WORK
+ */
+
+
 public class TransitionBetweenScenes : MonoBehaviour
 {
     // Keeping track of & having the ability to reference the Player's Data (and to save/load it)
@@ -16,7 +21,7 @@ public class TransitionBetweenScenes : MonoBehaviour
 
     public ModuleType upcomingModule;
 
-    private string sceneToLoad;
+    public string sceneToLoad;
 
     // Unity Editor menu items to quickly switch between scene settings and make the script easier to use
     public enum ModuleType
@@ -37,16 +42,12 @@ public class TransitionBetweenScenes : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        PD.Load(); // Loads any previously saved settings
-        Initialize(); 
-    }
-
-    private void Initialize() 
+    private void Start()
     {
         // Depending on the option chosen in the Unity-Editor, this section will set the current module (any additional settings or updates may be added here as well)
-        switch(upcomingModule) 
+
+        PD.Load(); // Loads any previously saved settings
+        switch (upcomingModule)
         {
             case ModuleType.None:
                 Debug.Log("A scene transition has not been assigned");
@@ -73,10 +74,11 @@ public class TransitionBetweenScenes : MonoBehaviour
                 break;
         }
     }
+
     // Update is called once per frame
     void Update()
     {
-        if (SteamVR_Input.GetStateUp("GrabGrip", leftHand)) // When the object is released from the left hand
+        /*if (SteamVR_Input.GetStateUp("GrabGrip", leftHand)) // When the object is released from the left hand
         {
             // Save previously assigned settings (save is located here incase in the future, more PlayerData changes are made in this script)
             PD.Save();
@@ -95,6 +97,6 @@ public class TransitionBetweenScenes : MonoBehaviour
         else
         {
             // Do nothing
-        }
+        }*/
     }
 }

@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class SendObjectHome : MonoBehaviour
 {
+    public Vector3 startingPosition;
+    public Quaternion startingRotation;
+
+    public void Start()
+    {
+        startingPosition = this.gameObject.transform.position;
+        startingRotation = this.gameObject.transform.rotation;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ImportantObject")) // Checking if the object is tagged as an Important Object
+        if (other.CompareTag("ImportantObject")) // Checking if the object is tagged as an Important Object - Allows it to teleport back
         {
-            // If true and the object has the "Homing.cs" script attached, reset the object to it's original "home" location
-            if(other.GetComponent<Homing>() != null) 
-            {
-                other.GetComponent<Homing>().GoHome();
-            }
+            this.gameObject.transform.position = startingPosition;
+            this.gameObject.transform.rotation = startingRotation;
         }
     }
 }

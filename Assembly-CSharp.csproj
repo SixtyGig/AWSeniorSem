@@ -108,12 +108,13 @@
     <Compile Include="Assets\Scenes\Global\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scenes\Global\Scripts\PlayerDataSet.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\Computer\DisplayTime.cs" />
-    <Compile Include="Assets\Scenes\MainMenu\Scripts\Pencil\Homing.cs" />
-    <Compile Include="Assets\Scenes\MainMenu\Scripts\Pencil\pencilTip.cs" />
+    <Compile Include="Assets\Scenes\MainMenu\Scripts\homing.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\PoolManager.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\SendObjectHome.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\StatsManagement.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\TransitionBetweenScenes.cs" />
+    <Compile Include="Assets\Scenes\MainMenu\Scripts\TransitionToEducation_Epi.cs" />
+    <Compile Include="Assets\Scenes\MainMenu\Scripts\TransitionToTraining_Epi.cs" />
     <None Include="Assets\3rd Party\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\3rd Party\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\3rd Party\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
