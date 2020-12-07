@@ -21,11 +21,11 @@ My project was started two years ago at in my hometown school district. During a
 
 ## Technologies
 Software
-* Unity3D - Version 2018.4.27f1
-* SteamVR's Unity Plugin - Version 2.6.1 (SDK 1.13.10)
+* Unity3D - Version [LTS Release 2018.4.27f1](https://unity3d.com/unity/qa/lts-releases?version=2018.4)
+* [SteamVR's Unity Plugin](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647) - Version 2.6.1 (SDK 1.13.10)
 * Blender - Version 2.91.0
 
-(Intended) VR Hardware
+VR Hardware (Intended)
 * HTC Vive Headset
 * Valve Index Controllers (though the HTC Vive Wands should work as well)
 
@@ -83,19 +83,30 @@ Located on each of the models (Male and Female) is a set of EpiPen hitboxes (fou
 ## Code Examples
 
 ### Global Scripts
-Located: .\Epi
+The player/student's data is being saved to a file via Unity's Serialization method. 
+
+PlayerData - The save data control file
+Located: .\
+`code`
+
+PlayerDataSet - The Actual Save File
+Located: .\
 `put-your-code-here`
 
-## Features
-List of Features
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do List:
+## To-Do List
+General:
 * Continued Module Work (I would like to polish everything down & receive some 3rd party feedback before moving through the modules)
-* Either automate student height on start or add a menu to custom-set a student's height
 * Find additional help for the graphics/animations/modeling for the project
+* Either automate student height on start or add a menu to custom-set a student's height
+
+Main Menu:
+* In-Game give the student the ability to change other settings such as **Volume**, **PlayerHeight** and more. The goal is still to keep as much of these "UI elements" as possible in the 3D space (aka, avoiding 2D panel-like options when possible)
+
+Education Scene:
+* Flesh out the Epi-Pen training simulation scene with better visuals, hitboxes and quality of life changes (such as access to _some_ settings while not at the main menu)
+
+Training Scene:
+* Flesh out the Epi-Pen training simulation scene with better visuals, hitboxes and quality of life changes (such as access to _some_ settings while not at the main menu)
 
 Eventual Goal: Create a listing on Steam
 
