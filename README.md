@@ -19,7 +19,9 @@ My project was started two years ago at in my hometown school district. During a
 
 ## Screenshots
 [Main Menu]()
+
 [Education]()
+
 [Training Area]()
 
 ## Technologies
@@ -28,7 +30,7 @@ Software
 * SteamVR's Unity Plugin - Version 2.6.1 (SDK 1.13.10)
 * Blender - Version 2.91.0
 
-VR Hardware
+(Intended) VR Hardware
 * HTC Vive Headset
 * Valve Index Controllers (though the HTC Vive Wands should work as well)
 
