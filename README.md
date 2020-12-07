@@ -89,25 +89,27 @@ The player/student's data is being saved to a file via Unity's Serialization met
 
 PlayerData - The save data control file
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
-`public class PlayerDataSet 
-{
-    // Game Data
-    public int totalEPIQuizPasses;
-    public int totalEPIQuizFailures;
 
-    public int totalPassedSimulations;
-    public int totalFailedSimulations;
+`public class PlayerDataSet` 
+`{`
+`    // Game Data`
+`    public int totalEPIQuizPasses;`
+`    public int totalEPIQuizFailures;`
 
-    // Education Data
-    public bool isEducated_EPI;
-    public bool isTrained_EPI;
+`    public int totalPassedSimulations;`
+`    public int totalFailedSimulations;`
 
-    // Education Data - Quiz
-    public float passingScore;
+`    // Education Data`
+`    public bool isEducated_EPI;`
+`    public bool isTrained_EPI;`
 
-    // Current Active Module/Activity
-    public string currentModule;
-}`
+`    // Education Data - Quiz`
+`    public float passingScore;`
+
+`    // Current Active Module/Activity`
+`    public string currentModule;`
+`}`
+
 
 PlayerDataSet - The Actual Save File
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
