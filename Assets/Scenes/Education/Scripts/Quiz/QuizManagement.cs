@@ -38,7 +38,7 @@ public class QuizManagement : MonoBehaviour
         GenerateQuestion();  // Then we select the first question from that bank to display to the user
     }
 
-    private void GenerateQuestion() // This generates a question and then assigns its (both possible and correct) answers 
+    public void GenerateQuestion() // This generates a question and then assigns its (both possible and correct) answers 
     {
         currentQuestion = Random.Range(0, questions.Count);
         questionText.text = questions[currentQuestion].question;
@@ -48,7 +48,7 @@ public class QuizManagement : MonoBehaviour
         questions.RemoveAt(currentQuestion); // Then after this question has been assigned to the UI, we want to remove this question from the pool of total questions | AKA: If we have 10 questions and #1 is displayed on the UI, we now only have 9 questions remaining in the pool to choose from
     }
 
-    private void GenerateAnswers() // This generates the answers for the question selected above
+    public void GenerateAnswers() // This generates the answers for the question selected above
     {
         for (int i = 0; i < options.Length; i++) 
         {
@@ -62,7 +62,6 @@ public class QuizManagement : MonoBehaviour
         }
     }
 
-    
     public void IsCorrect() 
     {
         numQuestionsCorrect++;

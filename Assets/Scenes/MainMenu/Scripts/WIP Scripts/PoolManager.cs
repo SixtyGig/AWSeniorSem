@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PoolManager : MonoBehaviour
 {
-    public GameObject LeadObjectPrefab;
-    // Start is called before the first frame update
+    // Would like to use a pool-based system to make writable pencil
     void Start()
     {
         // Instatiate PencilLead X times, make them children of a 'used'
