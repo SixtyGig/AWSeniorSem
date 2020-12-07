@@ -86,11 +86,11 @@ Located on each of the models (Male and Female) is a set of EpiPen hitboxes (fou
 The player/student's data is being saved to a file via Unity's Serialization method. 
 
 PlayerData - The save data control file
-Located: .\
+Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
 `code`
 
 PlayerDataSet - The Actual Save File
-Located: .\
+Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
 `put-your-code-here`
 
 ## To-Do List
