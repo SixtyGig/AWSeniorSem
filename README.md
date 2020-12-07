@@ -5,13 +5,13 @@
 Project is: _in progress_. While the original goal of my senior seminar project was to finish a multi-skill simulation in 300 hours, I've come to the realization that this was an unrealistic goal. Instead, I've turned this into a, "How much can I get done in 300 hours towards this goal." 
 
 ## Table of contents
+* [Status](#status)
 * [Inspiration](#inspiration)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Scenes](#Scenes)
 * [Code](#Code)
-* [Status](#status)
+* [FutureFeatureList](#futurefeaturelist)
 * [Contact](#contact)
 
 ## Inspiration
@@ -52,7 +52,7 @@ Status: _Work In Progress_
 Located: .\EpiAED_SeniorSem\Assets\Scenes\MainMenu
 Screenshot: [Main Menu](https://gyazo.com/4738699e68ade3c2f943b7a1969c9b71)
 
-
+The student spawns here, can teleport around the behind-the-desk area and can interact with the books. There is a 3D spacial audio point outside the doorway that allows the student to hear the traffic outside (can also visibly see it moving). There also is a computer to the right that contains total completion data and the current system time. 
 
 Known Bugs
 * Floor lighting sometimes makes textures appear black
@@ -66,14 +66,14 @@ Screenshot: [Education](https://gyazo.com/d18d5c91c1006aa4748819ca6dc89697)
 
 [Hologram](https://gyazo.com/120d3832d9f8f01f274f0bb4bdd6f1d7)
 
-The Education Scene is where the student learns the textbook knowledge about a particular skill. There is a hologram projection that appears and tells you the knowledge needed to be retained. After the lecture, it prompts you to take the quiz. Upon completing the quiz with a 70% or higher, you will be marked as having passed the educational portion and will be allowed to proceed on to the Training section of the simulation. _The goal is to eventually 'block' the student from having access to the training until the education portion has been sufficiently passed. Currently the Training is made available from the Main Menu at the start_)
+The Education Scene is where the student learns the textbook knowledge about a particular skill. There is a hologram projection that appears and tells you the knowledge needed to be retained. After the lecture, it prompts you to take the quiz. Upon completing the quiz with a 70% or higher, you will be marked as having passed the educational portion and will be allowed to proceed on to the Training section of the simulation. _The goal is to eventually 'block' the student from having access to the training until the education portion has been sufficiently passed. Currently the Training is made available from the Main Menu at the start_
 
 ### Training
 Status: _Work In Progress_
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Training
 Screenshot: [Training Area](https://gyazo.com/80a9878f9720bc3c663bc56c68affa1a)
 
-
+The student is now given an opportunity to physically practice the skill. Currently as it stands, the activity itself does not do much, but I've done considerable setup towards a working prototype (the hitboxes are setup, it just needs detection).
 
 Current plan:
 1. The student spawns in the room. 
@@ -87,34 +87,15 @@ Located on each of the models (Male and Female) is a set of EpiPen hitboxes (fou
 ### Global Scripts
 The player/student's data is being saved to a file via Unity's Serialization method. 
 
-PlayerData - The save data control file
+PlayerData.cs - The save data control file
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
 
-`public class PlayerDataSet` 
-`{`
-`    // Game Data`
-`    public int totalEPIQuizPasses;`
-`    public int totalEPIQuizFailures;`
-
-`    public int totalPassedSimulations;`
-`    public int totalFailedSimulations;`
-
-`    // Education Data`
-`    public bool isEducated_EPI;`
-`    public bool isTrained_EPI;`
-
-`    // Education Data - Quiz`
-`    public float passingScore;`
-
-`    // Current Active Module/Activity`
-`    public string currentModule;`
-`}`
-
-
-PlayerDataSet - The Actual Save File
+[PlayerDataSet.cs](https://gyazo.com/9152fa6c6452bfc44e99c3b1083251da) - The Actual Save File
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
 
-## Future Feature List
+DoNotDestroyOnLoad.cs - GameObjects with this script attached, will move from scene to scene, instead of being destroyed
+
+## FutureFeatureList
 General:
 * Continued Module Work (I would like to polish everything down & receive some 3rd party feedback before moving through the modules)
 * Find additional help for the graphics/animations/modeling for the project
@@ -129,7 +110,8 @@ Education Scene:
 Training Scene:
 * Flesh out the Epi-Pen training simulation scene with better visuals, hitboxes and quality of life changes (such as access to _some_ settings while not at the main menu)
 
-Eventual Goal: Create a listing on Steam
+Eventual Goals: 
+* Create a listing on Steam
 
 ## Contact
 Created by [@sixtygig](https://github.com/SixtyGig) - Feel free to reach out! 
