@@ -10,14 +10,12 @@ Project is: _in progress_. While the original goal of my senior seminar project 
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Scenes](#Scenes)
-* [Features](#features)
+* [Code](#Code)
 * [Status](#status)
 * [Contact](#contact)
 
 ## Inspiration
 My project was started two years ago at in my hometown school district. During a break my Freshman year of college, I met with Dr. Christopher Hibner and we started talking about virtual reality and its advantages in education. He had some expressed interests with integrating advanced technologies into the district...and VR would be one way to achieve that. I proposed that they could move some of their training programs onto the platform, to promote learning (visual, muscle-memory) and technology-based skills with the teachers and students. Chris liked the idea, and then immediately mentioned how he didn’t like their current AED and Epi-Pen training programs, because no physical interaction with those devices were required. This project was derived off of that.
-
-## Screenshots
 
 ## Technologies
 Software
@@ -52,8 +50,9 @@ This is a listing of all current scenes in the simulation.
 ### Main Menu
 Status: _Work In Progress_
 Located: .\EpiAED_SeniorSem\Assets\Scenes\MainMenu
+Screenshot: [Main Menu](https://gyazo.com/4738699e68ade3c2f943b7a1969c9b71)
 
-[Main Menu](https://gyazo.com/4738699e68ade3c2f943b7a1969c9b71)
+
 
 Known Bugs
 * Floor lighting sometimes makes textures appear black
@@ -63,15 +62,18 @@ Known Bugs
 Status: _Work In Progress_
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Education
 
-[Education]()
+Screenshot: [Education](https://gyazo.com/d18d5c91c1006aa4748819ca6dc89697)
 
-This portion 
+![Hologram](https://gyazo.com/120d3832d9f8f01f274f0bb4bdd6f1d7)
+
+The Education Scene is where the student learns the textbook knowledge about a particular skill. There is a hologram projection that appears and tells you the knowledge needed to be retained. After the lecture, it prompts you to take the quiz. Upon completing the quiz with a 70% or higher, you will be marked as having passed the educational portion and will be allowed to proceed on to the Training section of the simulation. _The goal is to eventually 'block' the student from having access to the training until the education portion has been sufficiently passed. Currently the Training is made available from the Main Menu at the start_)
 
 ### Training
 Status: _Work In Progress_
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Training
+Screenshot: [Training Area](https://gyazo.com/80a9878f9720bc3c663bc56c68affa1a)
 
-[Training Area](https://gyazo.com/80a9878f9720bc3c663bc56c68affa1a)
+
 
 Current plan:
 1. The student spawns in the room. 
@@ -80,20 +82,37 @@ Current plan:
 Next steps for the project:
 Located on each of the models (Male and Female) is a set of EpiPen hitboxes (found on the 'pelvis' of each model). Basically if the Epipen's tip collides with these hitboxes and stays there in the person for 3 seconds, this will mark a successful delivery of medication. The next step to the project is to set up this feature. It would be nice if there are other hitboxes that determine if an incorrect injection has been applied (marking a failed training simulation).
 
-## Code Examples
+## Code
 
 ### Global Scripts
 The player/student's data is being saved to a file via Unity's Serialization method. 
 
 PlayerData - The save data control file
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
-`code`
+`public class PlayerDataSet 
+{
+    // Game Data
+    public int totalEPIQuizPasses;
+    public int totalEPIQuizFailures;
+
+    public int totalPassedSimulations;
+    public int totalFailedSimulations;
+
+    // Education Data
+    public bool isEducated_EPI;
+    public bool isTrained_EPI;
+
+    // Education Data - Quiz
+    public float passingScore;
+
+    // Current Active Module/Activity
+    public string currentModule;
+}`
 
 PlayerDataSet - The Actual Save File
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
-`put-your-code-here`
 
-## To-Do List
+## Future Feature List
 General:
 * Continued Module Work (I would like to polish everything down & receive some 3rd party feedback before moving through the modules)
 * Find additional help for the graphics/animations/modeling for the project
