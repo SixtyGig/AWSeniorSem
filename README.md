@@ -52,15 +52,15 @@ Notes:
 * Red Book - Teleports you to the Training Scene
 
 ## Scenes 
-# Main Menu
+### Main Menu
 Status: _Ready_
 
-# Education - 
+### Education - 
 Status: _Not Completed_
 
 This portion 
 
-# Training
+### Training
 Status: _Not Completed_
 Current plan:
 1. The student spawns in the room. 
