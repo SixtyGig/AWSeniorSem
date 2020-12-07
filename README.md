@@ -64,7 +64,7 @@ Located: .\EpiAED_SeniorSem\Assets\Scenes\Education
 
 Screenshot: [Education](https://gyazo.com/d18d5c91c1006aa4748819ca6dc89697)
 
-![Hologram](https://gyazo.com/120d3832d9f8f01f274f0bb4bdd6f1d7)
+[Hologram](https://gyazo.com/120d3832d9f8f01f274f0bb4bdd6f1d7)
 
 The Education Scene is where the student learns the textbook knowledge about a particular skill. There is a hologram projection that appears and tells you the knowledge needed to be retained. After the lecture, it prompts you to take the quiz. Upon completing the quiz with a 70% or higher, you will be marked as having passed the educational portion and will be allowed to proceed on to the Training section of the simulation. _The goal is to eventually 'block' the student from having access to the training until the education portion has been sufficiently passed. Currently the Training is made available from the Main Menu at the start_)
 
