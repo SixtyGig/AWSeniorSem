@@ -87,11 +87,11 @@ Located on each of the models (Male and Female) is a set of EpiPen hitboxes (fou
 ### Global Scripts
 The player/student's data is being saved to a file via Unity's Serialization method. 
 
-PlayerData.cs - The save data control file
 Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
 
+PlayerData.cs - The save data control file
+
 [PlayerDataSet.cs](https://gyazo.com/9152fa6c6452bfc44e99c3b1083251da) - The Actual Save File
-Located: .\EpiAED_SeniorSem\Assets\Scenes\Global\Scripts
 
 DoNotDestroyOnLoad.cs - GameObjects with this script attached, will move from scene to scene, instead of being destroyed
 
