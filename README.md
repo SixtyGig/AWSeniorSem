@@ -28,7 +28,7 @@ Software
 * SteamVR's Unity Plugin - Version 2.6.1 (SDK 1.13.10)
 * Blender - Version 2.91.0
 
-(Intended) VR Hardware
+VR Hardware
 * HTC Vive Headset
 * Valve Index Controllers (though the HTC Vive Wands should work as well)
 
