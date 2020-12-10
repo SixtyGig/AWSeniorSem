@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d26cdb762a5d8e4a99560b31980c3ac, type: 3}
   m_Name: Q1_Epipen
   m_EditorClassIdentifier: 
-  question: Which Animal is better?
+  question: Which Animal is better? (cow)
   answers:
   - Cow
   - Chicken

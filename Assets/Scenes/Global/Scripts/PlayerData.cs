@@ -36,18 +36,18 @@ public class PlayerData : MonoBehaviour
     // Saves all PlayerData to a file
     public void Save() 
     {
-        // Game Data
+        // Game Data (General Data, training = simulations)
         saveData.totalEPIQuizPasses = this.totalEPIQuizPasses;
         saveData.totalEPIQuizFailures = this.totalEPIQuizFailures;
 
         saveData.totalPassedSimulations = this.totalEPIPassedSimulations;
         saveData.totalFailedSimulations = this.totalEPIFailedSimulations;
 
-        // Education Data
+        // Education Data (T/F if the player is educated or trained in a specific skill)
         saveData.isEducated_EPI = this.isEducated_EPI;
         saveData.isTrained_EPI = this.isTrained_EPI;
 
-        // Education Data - Quiz
+        // Education Data - Quiz (will likely use this to determine 'difficulty' in a later update
         saveData.passingScore = this.passingScore;
 
         // Current Active Module

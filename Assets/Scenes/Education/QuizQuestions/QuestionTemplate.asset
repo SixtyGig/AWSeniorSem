@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d26cdb762a5d8e4a99560b31980c3ac, type: 3}
   m_Name: QuestionTemplate
   m_EditorClassIdentifier: 
-  question: 
-  answers: []
-  correctAnswerIndex: 0
+  question: Number 3 is correct.
+  answers:
+  - Number 1
+  - Number 2
+  - Number 3
+  - Number 4
+  correctAnswer: 3

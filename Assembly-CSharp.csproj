@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{36866015-D658-1ACF-8CCC-CCB3D330470E}</ProjectGuid>
+    <ProjectGuid>{13592AAE-ABA9-C690-BC17-7417AB648127}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -102,8 +102,10 @@
     <Compile Include="Assets\Scenes\Education\Scripts\Not Currently In Use\Computer\MouseClick.cs" />
     <Compile Include="Assets\Scenes\Education\Scripts\Not Currently In Use\Computer\PhysicalMouse.cs" />
     <Compile Include="Assets\Scenes\Education\Scripts\Quiz\Answers.cs" />
+    <Compile Include="Assets\Scenes\Education\Scripts\Quiz\PlayAudioLesson.cs" />
     <Compile Include="Assets\Scenes\Education\Scripts\Quiz\Question.cs" />
     <Compile Include="Assets\Scenes\Education\Scripts\Quiz\QuizManagement.cs" />
+    <Compile Include="Assets\Scenes\Education\Scripts\Quiz\VR Interaction\LaserInput.cs" />
     <Compile Include="Assets\Scenes\Global\Scripts\DoNotDestroy.cs" />
     <Compile Include="Assets\Scenes\Global\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scenes\Global\Scripts\PlayerDataSet.cs" />
@@ -140,19 +142,19 @@
     <None Include="Assets\3rd Party\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\3rd Party\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Austin Winkler/Documents/Github/EpiAED_SeniorSem/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Austin Winkler/Documents/Github/AWSeniorSem/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Austin Winkler/Documents/Github/EpiAED_SeniorSem/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Austin Winkler/Documents/Github/AWSeniorSem/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Austin Winkler/Documents/Github/EpiAED_SeniorSem/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Austin Winkler/Documents/Github/AWSeniorSem/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Austin Winkler/Documents/Github/EpiAED_SeniorSem/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Austin Winkler/Documents/Github/AWSeniorSem/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Austin Winkler/Documents/Github/EpiAED_SeniorSem/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Austin Winkler/Documents/Github/AWSeniorSem/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.27f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -356,10 +358,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.27f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>C:/Users/Austin Winkler/Documents/Github/EpiAED_SeniorSem/Assets/3rd Party/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/Austin Winkler/Documents/Github/AWSeniorSem/Assets/3rd Party/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Austin Winkler/Documents/Github/EpiAED_SeniorSem/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Austin Winkler/Documents/Github/AWSeniorSem/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.27f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -709,23 +711,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
-      <Project>{383DF335-979D-ACBD-93D7-E67A25EDB1CE}</Project>
+      <Project>{EB0F3FBE-36A9-54A2-8AD9-9FF8C3667EED}</Project>
       <Name>SteamVR_Input_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{5E29CAEA-1C0E-0FCD-6E82-0EB5FF538202}</Project>
+      <Project>{CB5F439B-8BEE-06B5-1F0E-7F06D6C09340}</Project>
       <Name>SteamVR_Actions</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{5186C50C-DE55-C744-1007-ABED603A8319}</Project>
+      <Project>{E77F80B6-278F-404F-F2B1-A76454F24332}</Project>
       <Name>SteamVR_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR.csproj">
-      <Project>{D9D47C18-D912-5714-DC41-B455BD29EA24}</Project>
+      <Project>{4F441A23-ABAD-5BE3-AFB9-05D917938C30}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{3D806FCF-7BBD-C349-2035-1F83D7CA4BD2}</Project>
+      <Project>{1201F216-1264-11A4-9714-D931DB1E34FF}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
   </ItemGroup>

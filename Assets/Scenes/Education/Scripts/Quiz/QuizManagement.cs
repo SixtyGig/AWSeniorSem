@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizManagement : MonoBehaviour
 {
     public GameObject saveManager;
     public PlayerData PD;
+
+    public GameObject quizCanvas;
 
     public List<Question> questions; // List of Questions (and their answers)
     public GameObject[] options; // Array of buttos on the UI
@@ -23,12 +26,21 @@ public class QuizManagement : MonoBehaviour
 
     public void Awake()
     {
-        saveManager = GameObject.FindGameObjectWithTag("SaveManager");
-        PD = saveManager.GetComponent<PlayerData>();
+        try
+        {
+            saveManager = GameObject.FindGameObjectWithTag("SaveManager");
+            PD = saveManager.GetComponent<PlayerData>();
+        }
+        catch
+        {
+            Debug.Log("No Save Manager detected.");
+        }
     }
     public void Start()
     {
-        numTotalQuestions = questions.Count;
+        PD.Load();
+
+        numTotalQuestions = 4;
         // Any previous data reset to zero
         numQuestionsCorrect = 0;
         numQuestionsIncorrect = 0;
@@ -42,10 +54,10 @@ public class QuizManagement : MonoBehaviour
     {
         currentQuestion = Random.Range(0, questions.Count);
         questionText.text = questions[currentQuestion].question;
+        
         Debug.Log(questions[currentQuestion].question);
+
         GenerateAnswers(); // Every time we generate a question, answers will also be allotted to it
-         
-        questions.RemoveAt(currentQuestion); // Then after this question has been assigned to the UI, we want to remove this question from the pool of total questions | AKA: If we have 10 questions and #1 is displayed on the UI, we now only have 9 questions remaining in the pool to choose from
     }
 
     public void GenerateAnswers() // This generates the answers for the question selected above
@@ -65,48 +77,67 @@ public class QuizManagement : MonoBehaviour
     public void IsCorrect() 
     {
         numQuestionsCorrect++;
+        
+        Debug.Log("Number of Correct: " + numQuestionsCorrect);
+        Debug.Log("Number of Incorrect: " + numQuestionsIncorrect);
+
         questions.RemoveAt(currentQuestion); // Once the question has been given to the user, this removes it from the bank of possible questions
 
         if (questions.Count == 0) // Once there are no more questions, remove the UI from the player's View
         {
             canvas.enabled = false;
             FinalResults();
-            return;
         }
-
-        GenerateQuestion(); // Generates a new question to populate the UI
+        else
+        {
+            GenerateQuestion(); // Generates a new question to populate the UI
+        }
     }
     public void IsIncorrect() 
     {
         numQuestionsIncorrect++;
-        questions.RemoveAt(currentQuestion);
+
+        Debug.Log("Number of Correct: " + numQuestionsCorrect);
+        Debug.Log("Number of Incorrect: " + numQuestionsIncorrect);
+
+        questions.RemoveAt(currentQuestion); // Once the question has been given to the user, this removes it from the bank of possible questions
 
         if (questions.Count == 0) // Once there are no more questions, remove the UI from the player's View
         {
             canvas.enabled = false;
             FinalResults();
-            return;
         }
-        GenerateQuestion();
+        else
+        {
+            GenerateQuestion(); // Generates a new question to populate the UI
+        }
     }
     public void FinalResults() 
     {
-        correctPercentage = numQuestionsCorrect / numTotalQuestions; // Calculating what the final score was
+        Debug.Log(numQuestionsCorrect);
+        Debug.Log(numTotalQuestions);
 
-        if ((correctPercentage >= PD.passingScore) && (numQuestionsCorrect + numQuestionsIncorrect) == numTotalQuestions) // If they pass
+        correctPercentage = ((float)numQuestionsCorrect / (float)numTotalQuestions); // Calculating what the final score was (percentage) | We're multiplying by 100 to make it an even decimal
+        Debug.Log("This is the percent correct:" + correctPercentage * 100 + "%");
+        Debug.Log("Required Score:" + PD.passingScore);
+        if (correctPercentage >= PD.passingScore) // If they pass
         {
             if (PD.isEducated_EPI == false)
             {
                 PD.isEducated_EPI = true;
             }
-            PD.totalEPIQuizPasses++;
 
+            Debug.Log("Student Passed");
+            PD.totalEPIQuizPasses++;
             PD.Save();
+            SceneManager.LoadScene("MainMenu");
         }
-        else // If they fail 
+        else // If they fail - Update total Quiz Failures, then save the data
         {
+            Debug.Log("Student Failed");
             PD.totalEPIQuizFailures++;
             PD.Save();
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
