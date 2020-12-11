@@ -33,11 +33,13 @@ My Computer Specificatons
 * RAM: 32GB DDR4-3600
 
 ## Setup
-To set this project up:
+To set this project up VIA UNITY3D:
 1. Download the latest version of this [repository](https://github.com/SixtyGig/EpiAED_SeniorSem).
 2. Make sure you have a VR system attached prior to *opening* the project. 
 3. Open the project in Unity3D with version [LTS Release 2018.4.27f1](https://unity3d.com/unity/qa/lts-releases?version=2018.4).
 4. Press the play button at the middle-top of the window.
+
+~ I did add an executable & support for mouse/keyboard testing (if the tester does not have a VR system), though there still may be some unfinished bugs. So, if the option presents itself, I'd still recommend setting up Unity3D. 
 
 Notes:
 * Green book - Demonstrates how items with the "ImportantObject" tag will be teleported back to their original location upon contact with the floor (on either side of the countertop)
