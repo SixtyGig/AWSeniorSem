@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EpiPenManagement : MonoBehaviour
 {
-    public GameObject epiPen;
-    public GameObject epiPenTip;
+    private GameObject epiPen;
+    private GameObject epiPenTip;
 
 
     private void Awake()

@@ -18,6 +18,10 @@ TagManager:
   - EpiHitbox
   - EpiPenTip
   - GameTimeDisplay
+  - Floor
+  - TransitionManager
+  - Button
+  - Teacher
   layers:
   - Default
   - TransparentFX

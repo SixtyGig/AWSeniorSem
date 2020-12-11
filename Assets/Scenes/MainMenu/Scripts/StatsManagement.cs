@@ -22,6 +22,8 @@ public class StatsManagement : MonoBehaviour
 
     private void Start()
     {
+        PD.Load();
+
         testPass.text = PD.totalEPIQuizPasses.ToString();
         testFail.text = PD.totalEPIQuizFailures.ToString();
     }

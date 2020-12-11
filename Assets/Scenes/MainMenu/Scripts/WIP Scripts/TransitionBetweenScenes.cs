@@ -19,12 +19,12 @@ public class TransitionBetweenScenes : MonoBehaviour
     public SteamVR_Input_Sources leftHand;
     public SteamVR_Input_Sources rightHand;
 
-    public ModuleType upcomingModule;
+    private ModuleType upcomingModule;
 
     public string sceneToLoad;
 
     // Unity Editor menu items to quickly switch between scene settings and make the script easier to use
-    public enum ModuleType
+    private enum ModuleType
     {
         None,
         MainMenu,
@@ -74,6 +74,44 @@ public class TransitionBetweenScenes : MonoBehaviour
                 break;
         }
     }
+    public void TransitionToEducation() 
+    {
+        // Save previously assigned settings (save is located here incase in the future, more PlayerData changes are made in this script)
+        PD.Save();
+
+        // Load the Education scene with those settings
+        SceneManager.LoadScene("Education");
+    }
+    public void TransitionToTraining() 
+    {
+        // Save previously assigned settings (save is located here incase in the future, more PlayerData changes are made in this script)
+        PD.Save();
+
+        // Load the Training scene with those settings
+        SceneManager.LoadScene("Training");
+    }
+    public void TransitionToMenu()
+    {
+        // Save previously assigned settings (save is located here incase in the future, more PlayerData changes are made in this script)
+        PD.Save();
+
+        // Load the MainMenu scene with those settings
+        SceneManager.LoadScene("MainMenu");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Update is called once per frame
     void Update()

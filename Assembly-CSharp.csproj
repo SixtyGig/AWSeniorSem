@@ -112,8 +112,6 @@
     <Compile Include="Assets\Scenes\MainMenu\Scripts\Computer\DisplayTime.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\SendObjectHome.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\StatsManagement.cs" />
-    <Compile Include="Assets\Scenes\MainMenu\Scripts\TransitionToEducation_Epi.cs" />
-    <Compile Include="Assets\Scenes\MainMenu\Scripts\TransitionToTraining_Epi.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\WIP Scripts\PoolManager.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\WIP Scripts\TransitionBetweenScenes.cs" />
     <Compile Include="Assets\Scenes\Training\Scripts\EpiPenManagement.cs" />

@@ -40,7 +40,7 @@ public class QuizManagement : MonoBehaviour
     {
         PD.Load();
 
-        numTotalQuestions = 4;
+        numTotalQuestions = questions.Count;
         // Any previous data reset to zero
         numQuestionsCorrect = 0;
         numQuestionsIncorrect = 0;

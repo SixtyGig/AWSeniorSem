@@ -15,7 +15,7 @@ public class SendObjectHome : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ImportantObject")) // Checking if the object is tagged as an Important Object - Allows it to teleport back
+        if (other.CompareTag("Floor")) // Checking if the object is tagged as an Important Object - Allows it to teleport back
         {
             this.gameObject.transform.position = startingPosition;
             this.gameObject.transform.rotation = startingRotation;
