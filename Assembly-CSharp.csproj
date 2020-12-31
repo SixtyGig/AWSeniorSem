@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scenes\Education\Scripts\Quiz\QuizManagement.cs" />
     <Compile Include="Assets\Scenes\Education\Scripts\Quiz\VR Interaction\LaserInput.cs" />
     <Compile Include="Assets\Scenes\Global\Scripts\DoNotDestroy.cs" />
+    <Compile Include="Assets\Scenes\Global\Scripts\LoadFromJson.cs" />
     <Compile Include="Assets\Scenes\Global\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scenes\Global\Scripts\PlayerDataSet.cs" />
     <Compile Include="Assets\Scenes\MainMenu\Scripts\Computer\DisplayTime.cs" />

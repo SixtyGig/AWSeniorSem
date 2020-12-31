@@ -107,6 +107,21 @@ public class PlayerData : MonoBehaviour
         this.currentModule = saveData.currentModule;
     }
 
+    public void LoadFromJSON() 
+    {
+        string jsonToLoad = Application.persistentDataPath + "/data.json";
+        FileStream jsonFile;
+
+        if (File.Exists(jsonToLoad)) jsonFile = File.OpenRead(jsonToLoad);
+        else
+        {
+            Debug.Log("No JSON data found.");
+        }
+
+        
+    
+    }
+
     public void GenerateDefaults()
     {
         // Game Data
